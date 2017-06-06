@@ -52,7 +52,8 @@ function panzoom (target, cb) {
 		cb({
 			type: 'mouse',
 			dx: 0, dy: 0, dz: dy,
-			x: pos[0], y: pos[1]
+			x: pos[0], y: pos[1],
+			event: e,
 		});
 	});
 
