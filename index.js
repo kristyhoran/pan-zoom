@@ -6,7 +6,7 @@
 'use strict';
 
 
-const Impetus = require('impetus');
+const Impetus = require('./Impetus');
 const wheel = require('mouse-wheel');
 const touchPinch = require('touch-pinch');
 const position = require('touch-position');
@@ -40,6 +40,11 @@ function panzoom (target, cb) {
 			lastY = y;
 
 			cb(e);
+		},
+		end: (x, y) => {
+			cb({
+				type: 'mouseend',
+			});
 		},
 		multiplier: 1,
 		friction: .75
