@@ -6,7 +6,7 @@
 'use strict';
 
 
-const Impetus = require('./Impetus');
+const Impetus = require('./Impetus').default;
 const wheel = require('mouse-wheel');
 const touchPinch = require('touch-pinch');
 const position = require('touch-position');
